@@ -27,7 +27,7 @@ int compareArtefak(artefak a, artefak b) {
     }
 
     return strcmp(a.kategori, b.kategori);
-    return strcmp(a.kategori, b.kategori);
+    return strcmp(a.nama, b.nama);
 }
 
 /*--- BUBBLE SORT GENERIC PAKAI COMPARE FUNCTION ---*/
