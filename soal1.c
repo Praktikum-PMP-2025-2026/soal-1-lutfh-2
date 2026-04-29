@@ -19,17 +19,26 @@ typedef struct {
 } artefak;
 
 int compareArtefak(artefak a, artefak b) {
-    return strcmp(a.kategori, b.kategori);  
-
-    if (a.tahun != b.tahun) {
-        return a.tahun - b.tahun;
+    if (strcmp(a.kategori, b.kategori) != 0) {
+        return strcmp(a.kategori, b.kategori);  
     }
 
-    if (a.nilai != b.nilai) {
-        return (a.nilai < b.nilai) ? 1 : -1;
+    else if (strcmp(a.kategori, b.kategori) == 0) {
+        if (a.tahun != b.tahun) {
+            return a.tahun - b.tahun;
+      }
     }
 
-    return strcmp(a.nama, b.nama);
+    else if (a.tahun == b.tahun) {
+        if (a.nilai != b.nilai) {
+            return (a.nilai < b.nilai) ? 1 : -1;
+      }
+    }
+    
+    else if (a.nilai == b.nilai) {
+        return strcmp(a.nama, b.nama);
+    }
+
 }
 
 /*--- BUBBLE SORT GENERIC PAKAI COMPARE FUNCTION ---*/
