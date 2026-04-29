@@ -19,7 +19,7 @@ typedef struct {
 } artefak;
 
 int compareArtefak(artefak a, artefak b) {
-    if (strcmp(a.kategori, b.kategori == 0)){
+    if (strcmp(a.kategori, b.kategori) == 0)){
       if (a.tahun != b.tahun) {
           return a.tahun - b.tahun;
       }
