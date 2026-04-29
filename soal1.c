@@ -29,13 +29,13 @@ int compareArtefak(artefak a, artefak b) {
       }
     }
 
-    else if (a.tahun == b.tahun) {
+    else if (strcmp(a.kategori, b.kategori) == 0 && a.tahun == b.tahun) {
         if (a.nilai != b.nilai) {
             return (a.nilai < b.nilai) ? 1 : -1;
       }
     }
     
-    else if (a.nilai == b.nilai) {
+    else if (a.tahun == b.tahun && a.nilai == b.nilai) {
         return strcmp(a.nama, b.nama);
     }
 
