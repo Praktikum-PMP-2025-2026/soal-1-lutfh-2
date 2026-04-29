@@ -4,7 +4,7 @@
  *   Hari dan Tanggal    : Rabu 29 April 2026
  *   Nama (NIM)          : Lutfi Hasan (13224091)
  *   Nama File           : soal1.c
- *   Deskripsi           : Menghasilkan urutan yang sesuai dengan prioritas pengelompokkan dimulai dari alfaberis naik -> tahun naik -> nilai turun -> dan nama alfaberis naik
+ *   Deskripsi           : Menghasilkan urutan yang sesuai dengan prioritas pengelompokkan dimulai dari alfaberis naik -> tahun naik -> nilai turun -> dan nama alfaberis naik 
  * */
 
 #include <stdio.h>
@@ -19,14 +19,14 @@ typedef struct {
 } artefak;
 
 int compareArtefak(artefak a, artefak b) {
+    return strcmp(a.kategori, b.kategori);
+
     if (a.tahun != b.tahun) {
         return a.tahun - b.tahun;
     }
     if (a.nilai != b.nilai) {
         return (a.nilai < b.nilai) ? 1 : -1;
     }
-
-    return strcmp(a.kategori, b.kategori);
     return strcmp(a.nama, b.nama);
 }
 
